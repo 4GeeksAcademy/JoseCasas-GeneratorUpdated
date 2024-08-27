@@ -6,11 +6,9 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 window.onload = function() {
-  document.querySelector("#female").addEventListener("click", function() {
-    generateExcuse("female");
+  document.querySelector("#helper").addEventListener("click", function() {
+    generateExcuse("helper");
   });
-
-
 
   let name = [
     "Last Whisper",
@@ -27,7 +25,17 @@ window.onload = function() {
     let randomType = type[Math.floor(Math.random() * type.length)];
     let randomNature = nature[Math.floor(Math.random() * nature.length)];
 
-    let excuse = "Your Helping Partner Is:" + name[randomName] + ", The" + nature[randomNature] + type[randomType] + ".";
+    let excuse =
+      "Your Helping Partner Is:" +
+      " " +
+      [randomName] +
+      " " +
+      ", The" +
+      " " +
+      [randomNature] +
+      " " +
+      [randomType] +
+      ".";
     document.querySelector(".characterName").innerHTML = excuse;
   }
 };
