@@ -6,3 +6,35 @@ body {
   font-family: Arial, sans-serif;
   color: gold;
 }
+
+.overlay-wrapper {
+  position: relative;
+  display: block;
+  margin-bottom: 20px;
+}
+
+.overlay-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.overlay-wrapper h3 {
+  position: relative;
+  z-index: 2;
+  margin: 0;
+  padding: 10px 20px;
+  display: block;
+  text-align: center;
+}
+
+#helper {
+  display: block;
+  margin: 0 auto;
+}
